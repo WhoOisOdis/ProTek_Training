@@ -1,0 +1,20 @@
+p {
+	color: blue;
+	background-color: red;
+	font-family: Monospace; 
+	font-size: 130%; 
+}
+
+li {
+	
+	list-style-image: url('../IMAGES/icon.gif'); 
+	
+	
+}
+
+body {
+	background-color: red;
+	background-image: url('../IMAGES/hamster.gif');
+	background-repeat: no-repeat;
+	background-size: 100%; 
+}

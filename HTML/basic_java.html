@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Javascript Math Function</title>
+</head>
+<body>
+<p> THIS IS A PARaGRAPH</p>
+
+<script>
+	function hello(){
+		var day = prompt("Enter any day");
+		
+		switch(day){
+		case "Monday" :
+			{
+			alert("Today is Monday");
+			break;
+			}
+		case "Tuesday" :
+			{
+			alert("Today is Tuesday");
+			break;
+			}
+		case "Wednesday" :
+			{
+			alert("today is Wednesday");
+			break;
+			}
+		default : 
+			{
+			alert("Hello World");
+			}	
+		  }
+		}
+
+		
+	function grades(){
+		var grade = prompt("Type in your Grade");
+		
+		switch(grade){
+		case "A+" :
+			{
+			alert("Great fucking score!");
+			break;
+			}
+		case "F" :
+			{
+			alert("Quit this class");
+			break;
+			}
+		default :
+			{
+			alert("THIS IS NOT A VALID GRADE")
+			}
+		}
+	}
+	
+	function nameinputs(){
+		var name = prompt("Enter your name");
+		
+		
+		if ( name == "John" || age >30){
+			alert("Hey Fucker");
+		}
+		
+		else {
+			alert("YOUR NOT JOHN BRO");
+		}
+		var age = prompt ("Enter your age");
+		
+		if ( age == "22"){
+			alert("Whoa your a young dude");
+		}
+		
+		else {
+			alert("Your not of age");
+		}
+		}
+	
+	
+	function advancedage(){
+		var age = prompt("Enter your age");
+		
+		if ( age === "30"){
+			document.write("Hello");
+		}
+		else {
+			alert("IT DOESN'T MATTER HOW OLD YOU ARE")
+		}
+	}
+	
+	
+	
+	
+	
+</script>	
+<button onclick="advancedage()">Click here for advanced age</button>	
+<button onclick="nameinputs()"> NAME INPUTS AND STUFF </button>
+<button onclick="grades()">CLICK FOR GRADES</button>
+
+<button onclick="hello()">CLICK HERE</button>
+
+
+<!-- <script type="text/javascript" src="../JS/basic.js"></script> -->
+</body>
+</html>

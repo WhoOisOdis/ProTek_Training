@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>FIRST JAVASCRIPT ASSIGNMENT</title>
+</head>
+<body>
+	<script>		
+	
+// BEGIN CALLING FUNCTION WITHIN FUNCTION FUNCTION
+	function sum (x, y) 
+	{
+		var mul = x * y;
+		return (mul); 
+	}
+	
+	var z = sum (5, 8);
+		alert (z);
+// THIS IS AWESOME. 
+	
+	function printPrime()
+	{
+		var count = 0;
+		var num = prompt("Enter number here");
+		for (var x = 1; x <= num; x++)
+		{
+			for (var y = 1; y <= x; y++)
+				{
+					if (x % y == 0)
+						{
+						count++;
+						}
+				}
+		
+		if (count == 2) {
+			document.write ( x + "This number is PRIME <br>");
+		}
+
+		count = 0;
+	    }
+	}
+// END OF THIS LOOP
+
+	
+	
+	
+	
+// PRIME NUMBER LOOP			
+		
+		function primenumbers()
+		{
+			var x = prompt("Enter number here");
+			var count = 0;
+			for (var i = 1; i <= x; i++) //This is the first iteration
+			{
+				if (x % i == 0) 
+				{
+					count++;
+				}
+			}	
+				if (count == 2) 
+				{
+				document.write("X is prime");
+				}
+				
+				else 
+				{
+				document.write("X is not prime"); 
+				}
+			
+		    }
+// END OF PRIME NUMBERS FUNCTION	
+
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+	<button onclick="printPrime()">LIST OF PRIME NUMBERS</button>
+	<button onclick="firstAssignment()"> IF-else Assignment Part 1. </button>		
+</body>
+</html>
