@@ -404,3 +404,32 @@ function loops8()
 
 	}
 }
+
+
+function primeNumbersFromScratch()
+{
+	var num = prompt("Enter your number here");
+	var count = 0;
+
+	for (var x = 1; x <= num; x++)
+	{
+		for (var y = 1; y <= x; y++)
+		{
+			if (x % y == 0)
+			{
+				count++;
+			}
+		}
+		if (count == 2)
+		{
+			document.write(x + "is a prime number <br>");
+		}
+
+		else
+		{
+			document.write(x + "is not a prime number <br>");
+		}
+
+		count = 0;
+	}
+}
