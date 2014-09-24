@@ -433,3 +433,24 @@ function primeNumbersFromScratch()
 		count = 0;
 	}
 }
+
+function switchCase()
+{
+	var day = prompt("Enter the day of the week");
+	switch(day)
+	{
+		case("Monday"):
+		{
+			alert(day + " we serve pasta");
+			break;
+		}
+
+		default:
+		{
+			alert("WE DON'T SERVE SHIT");
+			break;
+		}
+	}
+}
+
+

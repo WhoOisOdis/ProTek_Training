@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+	function displayQuotes()
+	{	
+		var x = ["Quote1", "Quote2", "Quote3", "Quote4", "Quote 5", "Quote6", "Quote7", "Quote8"];
+		for(var i = 0; i < x.length; i++)
+		{
+			document.write(x[i] + "<br>");
+		}
+		assignment2(x);
+	} // End of function displayQuotes
+	// in this last line of code, assignment 2 means that it's just
+	// sending the value of x (which is the array of quotes, to the next function)
+	// so the next function receives the value, and it can reassign it to anything it wants
+	// you declare that new variable in the function, which in this case is assignment2(p). 
+
+
+	function assignment2(p)
+	{
+		alert(p.length);
+		var y = p.slice(3,8);
+		alert(y);
+		alert(p);
+		p.pop();
+		console.log(p.pop);
+		p.reverse();
+		console.log(p[7]);
+		alert(p);
+		p.shift();
+		alert(p.length);
+		console.log(p.length);
+		p.sort(); /* dont know what p.sort does yet */
+		alert(p);
+
+	}
+	
+	// END of assignment2, troubleshoot this a little further
+
+	function assignment4()
+	{
+		var array1 = prompt("Enter 5 different names");
+		array1 = array1.split(" ");
+		alert(array1);
+
+	
+
+	}
+
+
+</script>
+</head>
+<body>
+	<button onclick="displayQuotes()">Array Assignment 1</button>
+	<button onclick="assignment4()">Click here for assignment 4</button>
+
+<!-- 	<button onclick="assignment2()">Click here for Array assignment 2</button> -->
+	
+</body>
+</html>

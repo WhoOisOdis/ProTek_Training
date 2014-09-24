@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascriptt Array homework</title>
+	<script>
+	function displayQuotes()
+	{
+		var array1 = ["Quote0", "Quote1", "Quote2", "Quote3", "Quote4", "Quote5", "Quote6", "Quote7", "Quote8", "Quote9"]
+		for (var i = 0; i < array1.length; i++)
+		{
+
+		document.write(array1[i]);
+			
+		}	
+
+		problem2(array1);
+	}
+
+	function problem2(x)
+	{
+		alert(x.length);
+		x.slice(4,10); /*if i run this on its own, it wont actulaly change the value of x in any way, but below this i run x.push on its own, and it actually changes the value of X by adding julio at the end.*/
+		alert(x);
+		alert(typeof x);
+		x.push("Julio"); /* This operation happens, because the following lines of code display the original array AND the pushed value "Julio", and it stlil remains an object aka array */
+		alert(typeof x);
+		console.log(x);
+		alert(x);
+		alert(x + " is the value after executing the .push method");
+
+		x.pop();
+		alert(x);
+		x.reverse();
+		alert(x);
+		console.log(x[8]);
+		x.shift();
+		alert(x + "this is after the value after the .shift method");
+		console.log(x.length);
+		x.sort();
+		alert(x + "this is value after sort method");
+
+	}
+
+	function problem4()
+	{
+		var array4 = prompt("Enter 5 diff names each with spaces in between");
+		var array5 = array4.split(" ");
+		alert(typeof array4);
+		alert(array4);
+		alert(array5);
+		alert(typeof array5); /* the typeof operation here confirms that array5 is an object not a string, so it was successfully converted to an array */
+		
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+<button onclick="displayQuotes()">Click here for Ques.1</button>
+<button onclick="problem4()">click here for prob #4</button>
+	
+</body>
+</html>
