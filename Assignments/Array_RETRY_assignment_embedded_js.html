@@ -49,17 +49,83 @@
 		alert(typeof array4);
 		alert(array4);
 		alert(array5);
-		alert(typeof array5); /* the typeof operation here confirms that array5 is an object not a string, so it was successfully converted to an array */
-		
+		alert(typeof array5);
+		array5.push("George")
+		console.log(array5);
+		array5.unshift("Julio");
+		console.log(array5);
+
+		 /* the typeof operation here confirms that array5 is an object not a string, so it was successfully converted to an array */
 
 	}
 
+	function problem5()
+	{
+		var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]
+		console.log(months);
+		months.pop();
+		console.log(months);
+	}
+
+	function arrayDays()
+	{
+		var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+		var d = prompt("Enter the day here to see days that come afterwards");
+		var y = days.indexOf(d);
+		console.log(y);
+		y = y + 1;
+		console.log(y);
+		
+		if(y == days.length)
+		{
+			alert("This is the last day of the week");
+		}
+
+		else 
+		{
+			for(var i = y; i < days.length; i++)
+			{
+				document.write(days[i]);
+			}
+
+		}
+	}
+
+	function stringProb7()
+	{
+		var str = ("I like this product; I hate this product; This product is worth buying; I don't agree with the above user")
+		var strArray = str.split(";");
+		console.log(strArray);
 
 
+	}
+
+	function stringProb10()
+	{
+		var string1 = "Javascript notation %^&* notes that structure rules and not context for nothing";
+
+		var arrayString1 = string1.match(/not/gi);
+		alert(typeof arrayString1);
+		console.log(arrayString1);
+		document.write(arrayString1 + "<br>");
+		// CHECK THE BELOW 2 LINES OF CODE AFTERWARDS to do
+		// assignment 10 part b. 
+		var arrayString2 = string1.split("not");
+		arrayString2 = arrayString2.join();
+		alert(typeof arrayString2);
+		alert(arrayString2);
+		document.write(arrayString2 + "<br>");
+		arrayString2 = arrayString2.replace(/,/g, "");
+		document.write(arrayString2);
+		
+	}
 
 
-
-
+	function abc()
+	{
+		var x = document.getElementById("myBox").value;
+		document.getElementById("myBox2").value = x;
+	}
 
 
 
@@ -68,8 +134,23 @@
 </head>
 <body>
 
-<button onclick="displayQuotes()">Click here for Ques.1</button>
+<button onclick="displayQuotes()">Click h ere for Ques.1</button>
 <button onclick="problem4()">click here for prob #4</button>
-	
+<button onclick="problem5()">Click here problem 5</button><button onclick="arrayDays()">Click here arrayDays</button>	
+	<button onclick="stringProb7()">This is question 7 for strings</button>
+<button onclick="stringProb10()">Click here for prob10</button>
+
+<input type="text" id="myBox"> <br>
+<button onclick="abc()">SHOW</button> <br>
+<input type="text" id="myBox2">
+
+
+
+
+
+
+
+
+
 </body>
 </html>
