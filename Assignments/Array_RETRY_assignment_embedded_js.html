@@ -127,11 +127,26 @@
 		document.getElementById("myBox2").value = x;
 	}
 
+	function upperCase()
+	{
+		var y = document.getElementById("paraMod");
+		y.style.color = "red";
+		y.innerHTML = "SURPRISE I CHANGED";
+	}
 
+	function validate()
+	{
+		var fn = document.getElementById("fname").value;
+			if (fn == "")
+			{
+				document.getElementById("fname").style.border="2px solid red";	
+			}
 
+		return false;	
+	}
 
 	</script>
-</head>
+<!-- </head>
 <body>
 
 <button onclick="displayQuotes()">Click h ere for Ques.1</button>
@@ -144,6 +159,20 @@
 <button onclick="abc()">SHOW</button> <br>
 <input type="text" id="myBox2">
 
+
+
+Type whatever you want here: <br>
+<input type="text" id="inputData">
+<button onclick="upperCase()">Click here to change colors and more</button>
+<p id="paraMod"> This text will change if the function loads it properly</p> -->
+INPUT TYPE BUTTONS WORK NOT JUST BUTTONS, if you
+<form>
+	First Name: <input type="text" id="fname"><br>
+	Last Name: <input type="text" id="lname"><br>
+	<input type="button" value="Submit" onclick="validate()">
+ 
+</form>
+	
 
 
 

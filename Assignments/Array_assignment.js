@@ -12,7 +12,7 @@ function displayQuotes()
 }
 
 function assignment2(sayings)
-{	
+{		
 	alert(sayings.length);
 }
 
