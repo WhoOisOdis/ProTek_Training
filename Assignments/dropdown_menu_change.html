@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Drop Down Menu Change</title>
+	<style>
+		table, table td {
+			border-spacing: 20px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			padding: 10px;
+		}
+	</style>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="dropdown_menu_change.js"></script>
+</head>
+<body>
+	<!-- This is drop down menu assignment -->
+	<select name="countries" id="country" data-type="country">
+		<option value="USA">USA</option>
+		<option value="MEXICO">Mexico</option>
+		<option value="CHINA">China</option>
+	</select>
+<br>
+	<select name="cities" id="city" data-type="city">City
+	</select>
+
+<!-- Below this comment line is the table example from class -->
+<br>
+<button id="myBtn">Click here for table function</button>
+<table id="myTable" border=1>
+
+	<tr>
+		<th> First Name</th>
+		<th> Last Name</th>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+
+</table> <!-- End of first table --> 
+
+</body>
+</html>
