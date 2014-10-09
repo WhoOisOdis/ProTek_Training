@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>ANGULAR ASSIGNMENT</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="angular_basic.js"></script>
+
+</head>
+<body>
+
+<input type="text" ng-model="yourText" />
+<p>{{yourText}}</p>
+
+<div ng-controller="myCtrl">
+	
+	<table border="1">
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+		</tr>	
+
+		<tr ng-repeat="k in students">
+			<td>{{k.fname}}</td>
+			<td>{{k.lname}}</td>
+		</tr>
+	</table>
+</div>
+	
+</body>
+</html>
