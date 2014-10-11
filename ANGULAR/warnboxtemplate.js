@@ -1,27 +1,36 @@
 var app = angular.module("myApp",[]);
 
-// app.controller("myCtrl", function($scope)
-// {
-// 	$scope.type = "Warning";
+app.controller("myCtrl", function($scope)
+{
+	$scope.type = "Warning";
+	$scope.x = "Warning!!!!";
 
-// });
+});
+
+app.controller("myCtrl2", function($scope)
+{
+	$scope.x = "Success!";
+	$scope.y = "harroooo";
+});
 
 app.directive("warnbox",function()
 {
-	return 
-	{
+	return {
 		restrict: "E",
-		template: "<p>hi</p>"
+		scope: { 
+		  	z: "=info"
+		  },
+		transclude: true,	
+		template: "<div ng-transclude><img src='../IMAGES/hamster.gif' alt=''>" +
+						"<p>WARNING WARNING WARNING</p>" +
+						"<p>{{z}}</p></div>"
 	}
-
 });
-// GEORGES CODE BELOW
-app.directive("login", function()
-{
-	return 
-	{
-		restrict: "E",
-		template: "username<input type = 'text' /><br>password<input type = 'password' />"
-	}
 
-});
+app.config(["$routeprovider", function ($routeProvider)
+		$routeProvider.when("/accounts", 
+		{
+			templateUrl: "partials/account.html",
+			controller: "acctCtrl"
+		})
+	]);

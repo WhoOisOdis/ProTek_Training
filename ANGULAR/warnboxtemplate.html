@@ -4,16 +4,33 @@
 	<meta charset="UTF-8">
 	<title>Warning Box Assignments</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script> <!-- this is for router library link -->  
 	<script type="text/javascript" src="warnboxtemplate.js"></script>
 </head>
 <body>
 
 	<div ng-controller="myCtrl">
-	</div>
- 		<warnbox></warnbox>
- 		<login></login>
+ 		<warnbox info="x">
+ 			<h2>THIS IS HEADING1</h2>
+ 		</warnbox>
+ 	</div>	
 
+ 	<div ng-controller="myCtrl2">
+ 		<warnbox info="y">
+ 		<h2>THIS IS A HEADING 2</h2>
+ 		</warnbox>
+ 	</div>
+ <!-- THIS IS FOR ROUTING -->	
+	<a href="#accounts"> Accounts </a>
+	<a href="#about"> About Us </a>
+	
+	<div ng-view>
 		
+	</div>
+
+
+			
 
 
 </body>
