@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TESTING ARRAYS</title>
+	<script>
+	function animalFunction() 
+{
+	var animals = ["horse", "ox", "cow", "pig", "duck"];
+
+	var i = 0;
+	while (i < animals.length) {
+		
+		if (animals[i] === "pig") {
+			alert("THIS IS THE PIG");
+			break;
+		}
+
+		else {
+			alert("No animals yet");
+		}
+		alert(i);
+		i++;
+		
+	}
+	
+}
+	</script>
+</head>
+<body>
+	<button onclick="animalFunction()">CLICK HERE </button>
+</body>
+</html>
