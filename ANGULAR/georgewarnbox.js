@@ -6,6 +6,7 @@ app.directive("warningbox",function(){
 		template: "<p>WARNING</p>"
 	}
 });
+
 app.directive("login", function(){
 	return {
 		restrict: "E",
