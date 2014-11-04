@@ -25,9 +25,63 @@
 	}
 	
 }
+
+	function makeFieldYellow(x)
+	{
+		x.style.background = "yellow";
+	}
+
+	function changeCity()
+	{
+		var zipVal = document.getElementById("zip").value;
+		var city;
+
+		switch(zipVal) {
+			case "95148":
+				city = "San Jose";
+				break;
+			default :
+				document.getElementById("city").style.background="yellow";
+				city = "THAT AIN'T SAN JOSE DA FUQ";
+		}
+		document.getElementById("city").value = city;
+	}
+
+	function showAlert()
+	{
+		alert(document.getElementById("p1").innerHTML);
+	}
+
+	function showAnswer() {
+	  document.getElementById("p1").innerHTML = "4";
+	}
+
+	function swapPic(eId, picSrc)
+	{
+		document.getElementById(eId).src = picSrc;
+	}
 	</script>
 </head>
 <body>
 	<button onclick="animalFunction()">CLICK HERE </button>
+	<input type="text" size="30" onFocus="makeFieldYellow(this)"> <br>
+
+	ZIP CODE <BR>
+	<input type="text" id="zip" onblur="changeCity();"> <br>
+	CITY: <input type="text" id="city">
+
+<!-- 	<p id="p1">
+	This is what I'm talking about.
+	</p>
+	<input type="button" value="Click to see this text in an alert"
+	onClick="showAlert();">  -->
+
+	<h3>Watch for answer below.</h3>
+	<p id="p1">Answer will appear here.</p>
+	<input type="button" value="Click to see answer"
+	onClick="showAnswer();"> <br>
+
+	<img src="../IMAGES/Pic1.jpg" alt="mayandjulio" id="mayjulio1" onMouseover="swapPic(id, '../IMAGES/Pic2.jpg')" width="400px" height="400px" onMouseout="swapPic(id, '../IMAGES/Pic1.jpg')">
+
 </body>
 </html>

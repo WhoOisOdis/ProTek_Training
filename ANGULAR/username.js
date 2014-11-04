@@ -1,4 +1,4 @@
-var userApp = angular.module("myApp", []); //registering your app, [] is an empty dependencie injection
+\var userApp = angular.module("myApp", []); //registering your app, [] is an empty dependencie injection
 
 userApp.controller("myCtrl", function ($scope, $http)
 {

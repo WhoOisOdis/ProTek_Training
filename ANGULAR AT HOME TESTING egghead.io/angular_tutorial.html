@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>AngularJS Tutorials</title>
+   <script type="text/javascript" src="angular.min.js"></script>
+   <link rel="stylesheet" href="foundation.min.css">
+   <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+
+<div ng-app="">
+	
+		<div ng-controller="FirstCtrl">
+			<h1>{{9 + 2}}</h1>
+			<h2>{{data.message + " world"}}</h2>
+			<div class="{{data.message}}">
+				Wrap me in a foundation
+			</div>
+		</div>
+	
+</div>
+
+
+ </body>
+</html>
