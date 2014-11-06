@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Testing Angular Bootstrap for Accordiong + tabs</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"> <!-- This is the CSS sheet from twitter bootstrap -->
+</head>
+<body ng-controller="myCtrl1">
+	<div class="container">
+		<h1>To Do List</h1>
+			<ul>
+				<li>
+					<div class="checkbox">
+						<label> 
+							<input type="checkbox"> CHECK IT
+						</label>
+						<button type="button" class="close">&times;</button>
+					</div>
+				</li>
+			</ul>
+
+		<div class="form-group has-success has-feedback">
+		<p class="alert alert-info">Enter the tasks you want to do here</p>
+		  <label class="control-label" for="inputSuccess2">Enter your tasks here</label>
+		  <input type="text" class="form-control" id="inputSuccess2" ng-model="taskTyper">
+		  <button type="button"  ng-click="add()">APPEND TO TASK LIST</button>
+          
+		  <ul>
+		  	<li ng-repeat="tasks in nameArray">{{tasks}}</li>
+		  </ul>
+		
+		</div>	
+	</div>
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+
+<script>
+	function myCtrl1($scope) {
+
+		$scope.add = function() {
+			$scope.nameArray.push($scope.taskTyper);
+			$scope.taskTyper = null;
+			document.getElementById("inputSuccess2").focus();
+		}
+
+		$scope.nameArray = [];
+
+		$scope.repeatThis = [
+			{
+				"name": "Julio",
+				"idNum": "324"
+			},
+
+			{
+				"name": "Ravi",
+				"idNum": "321"
+			}	
+		];
+	}
+</script>	
+</body>
+</html>
