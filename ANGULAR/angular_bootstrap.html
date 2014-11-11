@@ -20,16 +20,44 @@
 			</ul>
 
 		<div class="form-group has-success has-feedback">
-		<p class="alert alert-info">Enter the tasks you want to do here</p>
-		  <label class="control-label" for="inputSuccess2">Enter your tasks here</label>
-		  <input type="text" class="form-control" id="inputSuccess2" ng-model="taskTyper">
-		  <button type="button"  ng-click="add()">APPEND TO TASK LIST</button>
-          
-		  <ul>
-		  	<li ng-repeat="tasks in nameArray">{{tasks}}</li>
-		  </ul>
-		
-		</div>	
+			<p class="alert alert-info">Enter the tasks you want to do here</p>
+			  <label class="control-label" for="inputSuccess2">Enter your tasks here</	label>
+			  <input type="text" class="form-control" id="inputSuccess2" ng-model="	taskTyper">
+			  <button type="button"  ng-click="add()">APPEND TO TASK LIST</button>
+        	  
+			  <ul>
+			  	<li ng-repeat="tasks in nameArray">{{tasks}}</li>
+			  </ul>
+			<ul>
+				<li ng-repeat="names in repeatThis">{{names.name}}</li>
+				<li ng-repeat="names in repeatThis">{{names.idNum}}</li>
+				<span class="label label-success">JAVASCRIPT</span>
+				<span class="label label-default">HTML</span>
+				<span class="label label-info">CSS</span>
+				<span class="label label-danger">ANGULAR</span>
+			</ul>
+	
+			
+		</div>
+
+		<form class="form-horizontal">
+			<div class="form-group">
+				<span>Name:</span>
+				<input class="form-control" type="text" value="" placeholder="Enter your name">	
+			</div>
+			<div class="form-group">
+				<span>Email:</span>
+				<input class="form-control" type="text" value="" placeholder="yourEmail@domain.com">
+			</div>
+			<button class="btn btn-success btn-sm">SAVE</button>
+			<a href="#" class="btn btn-warning btn-sm">CANCEL</a>
+			
+			<div class="jumbotron">
+			  <h1>WELCOME TO MY WORLD!</h1>
+			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic inventore consectetur, assumenda reiciendis iure ab iusto, nisi deleniti et, nulla reprehenderit unde, perspiciatis voluptas debitis nam asperiores? Non, hic, ex.</p>
+			  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+			</div>			
+		</form>
 	</div>
 	
 

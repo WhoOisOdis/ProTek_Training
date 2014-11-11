@@ -1,0 +1,9 @@
+<h1>WELCOME TO HOME</h1>
+
+<ol>
+	<li ng-repeat="items in people">
+		<a href="#/details/{{people.indexOf(items)}}">
+			{{items.name}}
+		</a>
+	</li>
+</ol>
