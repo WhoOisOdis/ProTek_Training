@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>TESTING A JSON CALL TO ANOTHER DOMAIN</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script>
+	var myApp = angular.module('myApp', []);
+
+	var rtApiUrl = "http://api.rottentomatoes.com/api/public/v1.0/lists.json","movies":"http://api.rottentomatoes.com/api/public/v1.0/movies.json"
+
+	myApp.controller('myCtrl', ['$scope', '$http', function($scope, $http) {
+		$http.jsonp("http://api.rottentomatoes.com/api/public/v1.0/movies.json").success
+	}]);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
+
+<!-- {"links":{"lists":"http://api.rottentomatoes.com/api/public/v1.0/lists.json","movies":"http://api.rottentomatoes.com/api/public/v1.0/movies.json"}} -->
