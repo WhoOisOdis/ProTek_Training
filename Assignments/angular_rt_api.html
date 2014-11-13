@@ -4,18 +4,33 @@
 	<meta charset="UTF-8">
 	<title>TESTING A JSON CALL TO ANOTHER DOMAIN</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-	<script>
-	var myApp = angular.module('myApp', []);
-
-	var rtApiUrl = "http://api.rottentomatoes.com/api/public/v1.0/lists.json","movies":"http://api.rottentomatoes.com/api/public/v1.0/movies.json"
-
-	myApp.controller('myCtrl', ['$scope', '$http', function($scope, $http) {
-		$http.jsonp("http://api.rottentomatoes.com/api/public/v1.0/movies.json").success
-	}]);
-	</script>
+	<script src="angular_rt_api.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 </head>
-<body>
+<body class="container">
+	<div ng-controller="myCtrl">
 	
+	ENTER MOVIE QUERY HERE: <input class="form-control" type="text" ng-model="mQuery">
+	<button class="btn btn-success" ng-click="searchMovie(mQuery)">CLICK TO SEARCH</button>
+	<h1>{{movieInfo.movies[0].title}}</h1>
+	<p class="text-info">SYNOPSIS 0: {{movieInfo.movies[0].synopsis}}</p>
+	<p class="text-info">SYNOPSIS 1:{{movieInfo.movies[1].synopsis}}</p>
+	<p>RATINGS: {{movieInfo.movies[0].ratings.audience_rating}}</p>
+
+	<img src="{{movieInfo.movies[0].posters.detailed}}" width="200px" height="300px" alt=""> <br>
+
+	<button class="btn btn-primary"ng-click="searchReviews()">FIND REVIEWS FOR THIS MOVIE</button>
+
+	<div class="jumbotron">
+		<div ng-repeat="items in reviews">
+			<p> REVIEWS: <mark>{{items.quote}}</mark></p>
+		</div>
+	</div>
+	<!-- http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=ysb7mmguhpfzkcawf6kcv2zp&q=Inception&page_limit=1&_prettyprint=true&callback=JSON_CALLBACK -->
+
+
+	</div>
+
 </body>
 </html>
 
