@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>YAHOO FINANCE API ASSIGNMENT</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="yahoo_finance_api.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+</head>
+<body class="container">
+	<div ng-controller="myCtrl">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h1>YAHOO FINANCE API DATA</h1>
+			</div>
+					<table class="table">
+							<tr>
+								<th>SYMBOL</th>
+								<th>NAME</th>
+								<th>CHANGE</th>
+								<th>DAYS HIGH</th>
+								<th>DAYS LOW</th>
+								<th>LAST TRADE PRICE</th>
+							</tr>
+								<tr ng-repeat="stocks in yahooQuote">
+									<td>{{stocks.symbol}}</td>
+									<td>{{stocks.Name}}</td>
+									<td>{{stocks.Change}}</td>
+									<td>{{stocks.DaysHigh}}</td>
+									<td>{{stocks.DaysLow}}</td>
+									<td>{{stocks.LastTradePriceOnly}}</td>
+								</tr>
+					</table>
+			<label>Search Company:</label><input type="text" class="form-control">
+			<button class="btn btn-primary" ng-click="getStocks()">GET DATA</button>		
+		</div>
+	</div>
+</body>
+</html>
+
+<!-- 
+<body class="container">
+	<div ng-controller="myCtrl">
+		<h1>YAHOO FINANCE API DATA</h1>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>SYMBOL</th>
+							<th>NAME</th>
+							<th>CHANGE</th>
+							<th>DAYS HIGH</th>
+							<th>DAYS LOW</th>
+							<th>LAST TRADE PRICE</th>
+						</tr>
+					</thead>
+				</table>
+		<div ng-repeat="stocks in yahooQuote">
+			<table class="table table-striped">
+				<tr>
+					<td>{{stocks.symbol}}</td>
+					<td>{{stocks.Name}}</td>
+					<td>{{stocks.Change}}</td>
+					<td>{{stocks.DaysHigh}}</td>
+					<td>{{stocks.DaysLow}}</td>
+					<td>{{stocks.LastTradePriceOnly}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+ -->
+
+<!-- ///////////////////////////////////////
+OTHER VERSION
+<div class="row">
+			<div class="col-md-1">
+				<p>SYMBOL</p>
+			</div>
+			<div class="col-md-1">
+				<p>NAME</p>
+			</div>
+			<div class="col-md-1">
+				<p>CHANGE</p>
+			</div>
+			<div class="col-md-1">
+				<p>DAYS HIGH</p>
+			</div>
+			<div class="col-md-1">
+				<p>DAYS LOW</p>
+			</div>
+			<div class="col-md-1">
+				<p>LAST TRADE PRICE</p>
+			</div>
+		</div>
+
+		<div ng-repeat="stocks in yahooQuote">
+			<div class="row">
+				<div class="col-md-1">
+					<p>{{stocks.symbol}}</p>
+				</div>
+				<div class="col-md-1">
+					<p>{{stocks.Name}}</p>
+				</div>
+				<div class="col-md-1">
+					<p>{{stocks.Change}}</p>
+				</div>
+				<div class="col-md-1">
+					<p>{{stocks.DaysHigh}}</p>
+				</div>
+				<div class="col-md-1">
+					<p>{{stocks.DaysLow}}</p>
+				</div>
+				<div class="col-md-1">
+					<p>{{stocks.LastTradePriceOnly}}</p>
+				</div>
+			</div> 
+		</div> -->
