@@ -1,0 +1,7 @@
+You are given 20 mins to fix all the issues in TASK-1:
+
+1.Change font color for Nav list elements
+2.Remove underlines
+3.Remove blue border for the image in IE.
+4.Arrange the video player  image in the “BOX”  using positions 
+5.Hide the text in the bottom divs  upto div width and height ,and show 3 dots(...) at the end of the text. 

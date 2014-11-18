@@ -1,0 +1,12 @@
+You are given 40 mins to finish this task.
+
+The page should be compatible on IE9 and above. Firefox and Chrome. So you MUST use HTML5 and CSS3.
+
+You are required to build the page as per the mock up given in "MOCK-UP" folder.
+
+The images related to the mock up are given in the images folder.
+
+You have the freedom to come up with your own margins and padding values. However, the final output should look exactly like the mock up.
+
+The text(content) needed to put in the pages are given in the content folder.
+

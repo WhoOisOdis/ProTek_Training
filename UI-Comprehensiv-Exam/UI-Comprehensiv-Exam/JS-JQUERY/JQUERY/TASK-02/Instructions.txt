@@ -1,0 +1,18 @@
+You are given 40 mins to finish this task
+
+[HTML,CSS, TWITTER BOOTSTRAP, JQUERY, AJAX]
+
+By default, only the "Show Items in Cart" button should be visible on the page. No table should be shown.
+
+You are given a data.json file with 20 records.
+
+When the user clicks on the "Show Items in Cart" button, he/she should see the first 8 items in the cart in a tabular view.
+
+The data should be pulled from json file. The data contains the information about order and wishlist. Users should only see the transactions from wishlist.
+
+The user should be able to delete each item from the tabular view.
+
+Use Twitter Bootstrap to make the table and buttons looks elegant.
+
+When the user clicks on DELETE button, the whole record (tr) should be deleted from the UI.
+[When the page is refresh and clicked again on the SHow items button, the deleted row will appear again - this is OK].

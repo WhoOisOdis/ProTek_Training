@@ -1,0 +1,20 @@
+You have 40 mins to code this.
+
+Create a simple form and write JS code to validate the form. No need to style the form. A plain form should be OK. Spend more time on JS.
+
+You should be using Object Oreinted programming concepts in order to validate the form.[This is Mandatory]
+
+The form should contain the following fields:
+
+- First Name
+- Last Name
+- Email
+- Username
+- State Dropdown (5 US states should be good)
+- Gender [radio buttons]
+- I agree to terms and conditions
+- SUBMIT Button [should be disabled by default].
+
+The field should be validated as soon as the user focuses out of the field (hint: on blur). If the field is empty then add red border to that field. No need to check for patterns (regular expressions not needed).
+
+Once all the fields are validated, the submit button should be enabled.

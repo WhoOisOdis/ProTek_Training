@@ -6,21 +6,25 @@ http.createServer(function(request, response) { // THE REASON THIS FUNCTION IS P
 	response.end();
 }).listen(8888);
 
+
+
+
+
 // THE CODE ABOVE IS THE SAME AS THE CODE BELOW
 
-var http = require("http");
+// var http = require("http");
 
-function onRequest(request, response) {
-	console.log("THIS RECEIVED A REQUEST");
-	response.writeHead(200, {
-		"Content-Type": "text/plain"
-	});
-	response.write("Hello WorldS!");
-	response.end();
-}
+// function onRequest(request, response) {
+// 	console.log("THIS RECEIVED A REQUEST");
+// 	response.writeHead(200, {
+// 		"Content-Type": "text/plain"
+// 	});
+// 	response.write("Hello WorldS!");
+// 	response.end();
+// }
 
-http.createServer(onRequest).listen(8888);
-console.log("Server has been started");
+// http.createServer(onRequest).listen(8888);
+// console.log("Server has been started");
 
 
 

@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+margin:0;
+padding:0;
+}
+.container{
+
+width:980px;
+margin:0 auto;
+}
+.nav{
+width:980px;
+float:left;
+background:#999999;
+float:left;
+margin:10px 0;
+}
+.nav ul {
+float:left;
+margin:0;
+}
+.nav ul li{
+float:left;
+margin:0;
+padding:0;
+}
+.nav ul li a{
+float:left;
+margin:0 20px 0 0;
+}
+.content{
+width:100%;
+float:left;
+margin:0;
+}
+.box{
+width:400px;
+height:300px;
+float:left;
+margin:0 10px;
+border:1px solid #000000;
+}
+img.im{
+position:absolute;
+bottom:0;
+right:0;
+}
+img.pic{
+float:left;
+margin:0;
+padding:0;
+}
+.para{
+width:200px;
+height:100px;
+float:left;
+border:1px solid #000000;
+margin:10px;
+}

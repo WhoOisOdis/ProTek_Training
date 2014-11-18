@@ -1,0 +1,16 @@
+This task should be completed in 15mins.
+
+By default all the "formbox" containers should be hidden. Only the radio button and the text beside the radio buttons should be visible.
+
+When the user clicks on any of the radio button/label text, the corresponding form container should slide down.
+
+When the user clicks on other radio button/label text, 
+	-any previously open form containers should slide up and
+	-the corresponding form container should slide down. 
+
+So at any given point of time, only one form should be shown on the screen.
+
+Example: When the user clicks on "Billing", the radio button should be selected and the form related to Billing should slide down. 
+Now, when the user clicks on "Shipping Details", 
+	-then the "Billing" form div should slide up and
+ 	- "Shipping Details" form div should slide down.

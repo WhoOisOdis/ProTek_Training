@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+
+.contaner{
+width:980px;
+margin:0 auto;
+}
+.header{
+width:978px;
+float:left;
+margin:0;
+height:200px;
+border:1px solid #000;
+padding:0;
+background:#CCCCCC;
+}
+.left_panel{
+float:left;
+margin:0;
+padding:0;
+width:600px;
+height:500px;
+border:1px solid #000;
+}
+.main{
+width:968px;
+float:left;
+margin:0;
+padding:0 5px;
+border:1px solid #000;
+}
+.right_panel{
+float:right;
+width:300px;
+height:500px;
+padding:20px 0;
+border:1px solid #000;
+}
+.left_img{
+width:200px;
+height:200px;
+float:left;
+border:1px solid #000;
+}
+.right_img{
+float:right;
+width:200px;
+height:200px;
+border:1px solid #000;
+
+}
