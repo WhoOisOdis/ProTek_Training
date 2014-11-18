@@ -1,13 +1,20 @@
 var yahooApi = angular.module('myApp', []);
 
 yahooApi.controller('myCtrl', ['$scope', '$http', function($scope, $http) {
+
 	var baseUrl = 'https://query.yahooapis.com/v1/public/yql?q=';
+	
 	var yql_query = 'select * from yahoo.finance.quote where symbol in ("YHOO","AAPL","GOOG","MSFT", "NOK", "ERIC", "AMZN", "FB", "INTC", "CSCO", "TXN", "ADBE", "INTC", "WDC", "SNDK",  "ADSK", "GRPN", "SNPS" )';
+
 	var encodedUriString = encodeURI(baseUrl+yql_query);
+
 	var queryStringFinal = encodedUriString + '&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=JSON_CALLBACK';
+
 	$http.jsonp(queryStringFinal).success(function(data) {
 		$scope.yahooQuote = data.query.results.quote;
+
 		console.log(data);
+
 		console.log($scope.yahooQuote);
 	});
 }]);
