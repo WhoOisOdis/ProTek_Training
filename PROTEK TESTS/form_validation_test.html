@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FORM VALIDATION TEST</title>
+	
+</head>
+<body>
+	<form>
+		<fieldset>
+		<legend>FORM VALIDATE</legend>
+			First Name: <input type="text" id="fname" onblur="f.validate()"> <br>
+			Last Name: <input type="text" id="lname" onblur="l.validate()"> <br>
+			Email: <input type="text" id="email"> <br>
+			Username: <input type="text" id="userName"> <br>
+			
+			
+			<select name="states" id="stateDrop">
+				<option value="cal">California</option>
+				<option value="wa">Washington</option>
+				<option value="nev">Nevada</option>
+				<option value="org">Oregon</option>
+				<option value="tex">Texas</option>
+			</select> <br>
+
+			MALE: <input type="radio" name="gender" value="Male" onclick="validateErrors()">
+			FEMALE: <input type="radio" name="gender" value="Female" onclick="validateErrors()"> <br>
+			
+			<!-- Agree to terms and conditions here -->
+			<input type="submit" value="SUBMIT THIS FORM" id="submitBtn">
+		</fieldset>
+	</form>
+</body>
+</html>
+
+<script>
+
+		function Formfield(id) {
+			this.a = document.getElementById(id);
+			this.validate = function() {
+				if(this.a==null || this.a.value.length == 0) {
+
+					this.a.style.background = "red";
+
+				}
+			}; // REMEMBER THAT FUNCTIONS INSIDE CONSTRUCTORS
+		}
+
+		var f = new Formfield("fname"); 
+		var l = new Formfield("lname");
+		//console.log(typeof(fname.element));
+
+	</script>
+
+<script>
+	
+
+
+
+	
+		// var error = false;
+		// var submitBtn = document.getElementById("submitBtn");
+
+		// function checkForVal(fieldId) {
+		// 	var targetField = document.getElementById(fieldId);
+
+		// 	if (targetField.value.length === 0) {
+		// 		targetField.style.background = "red";
+		// 		var error = true;
+
+		// 	}
+
+		// 	else {
+		// 		targetField.style.background = "white";
+		// 		var error = false;
+		// 	}
+		// }
+
+
+		// function hideSubmit() {
+		// 	submitBtn.style.display = "none";
+		// }
+
+		// function validateErrors() {
+		// 	if (error === false) {
+		// 		submitBtn.style.display = "block";
+		// 	}
+
+		// 	else {
+		// 		alert("NO FILL THIS OUT");
+		// 		console.log(error);
+		// 	}
+		// }
+
+		// function validateAll() {
+		// 	var fname = document.getElementById('fname');
+		// 	var lname = document.getElementById('lname');
+		// 	var email = document.getElementById('email');
+		// 	var userName = document.getElementById('userName');
+		// 	var submitBtn = document.getElementById('submitBtn');
+
+		// 	if (fname.value.length & lname.value.length & email.value.length & userName.value.length != 0) {
+		// 		submitBtn.style.display = "block";
+		// 	}
+		// }
+
+		// pseudo code: if all documents by tag name INPUT.values are NOT  EQUAL TO 0 (!==), then show the submit button
+</script>
