@@ -11,8 +11,8 @@
 		<legend>FORM VALIDATE</legend>
 			First Name: <input type="text" id="fname" onblur="f.validate()"> <br>
 			Last Name: <input type="text" id="lname" onblur="l.validate()"> <br>
-			Email: <input type="text" id="email"> <br>
-			Username: <input type="text" id="userName"> <br>
+			Email: <input type="text" id="email" onblur="e.validate()"> <br>
+			Username: <input type="text" id="userName" onblur="u.validate()"> <br>
 			
 			
 			<select name="states" id="stateDrop">
@@ -35,19 +35,26 @@
 
 <script>
 
+		var valCount = 0;
+		
 		function Formfield(id) {
 			this.a = document.getElementById(id);
 			this.validate = function() {
 				if(this.a==null || this.a.value.length == 0) {
 
 					this.a.style.background = "red";
+					valCount = valCount + 1;
+					console.log(valCount);
 
 				}
 			}; // REMEMBER THAT FUNCTIONS INSIDE CONSTRUCTORS
 		}
 
-		var f = new Formfield("fname"); 
+		var f = new Formfield("fname");
 		var l = new Formfield("lname");
+		var e = new Formfield("email");
+		var u = new Formfield("userName");
+
 		//console.log(typeof(fname.element));
 
 	</script>
