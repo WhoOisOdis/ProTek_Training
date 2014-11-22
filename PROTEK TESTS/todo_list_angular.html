@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>TO DO LISTS </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="todo_list_angular.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+
+	<div ng-controller="myCtrl">
+		Task: <input type="text" ng-model="taskInput" id="taskField"> <br>
+		ID: <input type="text"> <br>
+		Status: <input type="checkbox" value="done"> Done
+
+		<ol>
+			<li ng-repeat="tasks in taskItems">
+				<input type="checkbox" name="tasks" ng-click="crossOut()">{{tasks}}
+			</li>
+		</ol>
+
+		<input type="button" value="Add Task" ng-click="addTask(taskInput)">
+
+	</div>
+
+
+</body>
+</html>

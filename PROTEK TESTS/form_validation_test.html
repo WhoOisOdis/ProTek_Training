@@ -35,7 +35,20 @@
 
 <script>
 
-		var valCount = 0;
+		document.getElementById("submitBtn").disabled = true;
+
+
+		var f = new Formfield("fname");
+		var l = new Formfield("lname");
+		var e = new Formfield("email");
+		var u = new Formfield("userName");
+
+		var fname = document.getElementById("fname");
+		var lname = document.getElementById("lname");
+		var email = document.getElementById("email");
+		var userName = document.getElementById("userName");
+		var array1 = [fname, lname, email, userName];
+		console.log(array1);
 		
 		function Formfield(id) {
 			this.a = document.getElementById(id);
@@ -43,25 +56,41 @@
 				if(this.a==null || this.a.value.length == 0) {
 
 					this.a.style.background = "red";
-					valCount = valCount + 1;
-					console.log(valCount);
-
+				}
+				else {
+					this.a.style.background = "white";
 				}
 			}; // REMEMBER THAT FUNCTIONS INSIDE CONSTRUCTORS
 		}
 
-		var f = new Formfield("fname");
-		var l = new Formfield("lname");
-		var e = new Formfield("email");
-		var u = new Formfield("userName");
+		function validateErrors() {
+			var valCount = 0;
+			for (var i = 0; i < array1.length; i++) {
+				
+				if (array1[i].value.length != 0) {
+					valCount = valCount + 1;
+					console.log(valCount);
+				}	
 
-		//console.log(typeof(fname.element));
+				else {
+					alert("FILL YOUR SHIT OUT");
+					break;
+				}
+
+				if (valCount == 4) {
+					document.getElementById("submitBtn").disabled = false;
+					// valCount = 0;
+				}
+
+				
+			};
+		}
 
 	</script>
 
 <script>
 	
-
+		
 
 
 	
